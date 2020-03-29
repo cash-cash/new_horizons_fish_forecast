@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-logo {
@@ -26,6 +27,38 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.locGroup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.fishPanel {
+  min-width: 150px;
+  min-height: 150px;
+  margin: 8px;
+}
+
+.timeText {
+  color: #737373;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.centerer {
+  display: inline-block;
+  width: 70%;
+}
+
+.timeSelect {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* border: 1px solid black; */
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 @keyframes App-logo-spin {

@@ -89,7 +89,7 @@ function App() {
   return (
     <div className="App">
             <div className={'linksbar'}>
-      <a href="https://github.com/nicole-8/new_horizons_fish_forecast">
+      <a href="https://github.com/cash-cash/new_horizons_fish_forecast">
       <img className={'github'} src={ghIcon} alt="Logo" />
       </a>
       </div>

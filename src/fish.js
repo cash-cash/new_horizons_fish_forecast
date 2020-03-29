@@ -374,7 +374,7 @@ export const fish = [
             times: [],
         },
         months_nth:['jun','jul','aug','sep','oct'],
-        months_sth:['jan','feb','mar','apr','may'],
+        months_sth:['jan','feb','mar','apr','dec'],
         img: 'Tilapia_NH_Icon.png',
     },
     {
@@ -875,7 +875,7 @@ export const fish = [
                 }
             ]
         },
-        months_nth:['jun','jul'],
+        months_nth:['jul','aug'],
         months_sth:['jan','feb'],
         img: 'Napoleonfish_HHD_Icon.png',
     },

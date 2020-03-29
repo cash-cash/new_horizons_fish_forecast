@@ -313,7 +313,7 @@ export const fish = [
         },
         months_nth:['jun','jul','aug'],
         months_sth:['jan','feb','dec'],
-        img: 'Giant_Snakehead_HHD_Icon.webp',
+        img: 'Giant_Snakehead_HHD_Icon.png',
     },
     {
         name_eng: 'Bluegill',
@@ -677,7 +677,7 @@ export const fish = [
         },
         months_nth:['jun','jul','aug','sep'],
         months_sth:['jan','feb','mar','dec'],
-        img: 'Piranha_HHD_Icon.webp',
+        img: 'Piranha_HHD_Icon.png',
     },
     {
         name_eng: 'Arowana',
@@ -788,7 +788,7 @@ export const fish = [
         },
         months_nth:['jan', 'feb', 'mar', 'sep', 'oct', 'nov', 'dec'],
         months_sth:['mar', 'apr','may','jun','jul', 'aug', 'sep'],
-        img: 'Sturgeon_HHD_Icon.webp',
+        img: 'Sturgeon_HHD_Icon.png',
     },
     {
         name_eng: 'Sea butterfly',

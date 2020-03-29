@@ -63,17 +63,14 @@ const filterFish = (month, time, hemisphere) => {
           const start = parseInt(t.time_start);
           const end = parseInt(t.time_end);
           const timeInt = parseInt(time);
-          console.log('fish is', f.name_eng)
           if (start < end) {
             // time is during the day
-            if (timeInt => start && time < end && timeInt !== 0) {
+            if (timeInt >= start && time < end && timeInt !== 0) {
               inTime = true;
             }
           } else {
             // time goes over through midnight
-            console.log('overnight fish', f.name_eng,start, end, timeInt)
-            if (timeInt => start || timeInt < end) {
-              console.log('this fish appears', f.name_eng)
+            if (timeInt >= start || timeInt < end) {
               inTime = true;
             }
           }

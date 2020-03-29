@@ -6,6 +6,10 @@ import { FishPanel } from "./fishPanel";
 import { TimeSelect } from "./timeSelect";
 import ghIcon from './github.svg';
 
+import ReactGA from 'react-ga';
+
+const trackingId = "UA-162045829-1"; // Replace with your Google Analytics tracking ID
+
 const getInitialMonth = () => {
   var currentTime = new Date();
   return currentTime.getMonth();
@@ -80,12 +84,16 @@ const filterFish = (month, time, hemisphere) => {
 function App() {
   const [month, setMonth] = useState(getInitialMonth());
   const [time, setTime] = useState(getInitialTime());
+  const [gaInitialized, setGaInitialized] = useState(false)
   const [hemisphere, setHemisphere] = useState("N");
+  if(!gaInitialized) {
+    ReactGA.initialize(trackingId);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+    setGaInitialized(true)
+  }
 
   const nowFish = filterFish(month, time.hrs, hemisphere);
   const sortedFish = separateFish(nowFish);
-  const arrangedTime = `${time.hrs}:${(parseInt(time.mins) < 10 ? `0${time.mins}` : time.mins)}`;
-  // const nowFish = fish;
   return (
     <div className="App">
             <div className={'linksbar'}>

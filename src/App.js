@@ -4,6 +4,7 @@ import { monthNames } from "./utils";
 import { fish } from "./fish";
 import { FishPanel } from "./fishPanel";
 import { TimeSelect } from "./timeSelect";
+import ghIcon from './github.svg';
 
 const getInitialMonth = () => {
   var currentTime = new Date();
@@ -87,7 +88,12 @@ function App() {
   // const nowFish = fish;
   return (
     <div className="App">
-      <h1>New Horizons Fish Forecast</h1>
+            <div className={'linksbar'}>
+      <a href="https://github.com/nicole-8/new_horizons_fish_forecast">
+      <img className={'github'} src={ghIcon} alt="Logo" />
+      </a>
+      </div>
+      <h1 className="pageTitle">New Horizons Fish Forecast</h1>
       <p> What fish can I catch right now? 🤔</p>
       <br />
       <div>
@@ -101,10 +107,9 @@ function App() {
         />
       </div>
       <br />
-      Here are the fish that will appear at the selected time:
       {sortedFish.sea.length > 0 && (
         <div>
-          <h2>Sea</h2>
+          <h2 className={'locTitle'}>Sea</h2>
           <div className={"locGroup"}>
             {sortedFish.sea.map(f => {
               return <FishPanel fish={f} />;
@@ -114,7 +119,7 @@ function App() {
       )}
       {sortedFish.river.length > 0 && (
         <div>
-          <h2>River</h2>
+          <h2 className={'locTitle'}>River</h2>
           <div className={"locGroup"}>
             {sortedFish.river.map(f => {
               return <FishPanel fish={f} />;
@@ -124,7 +129,7 @@ function App() {
       )}
       {sortedFish.pond.length > 0 && (
         <div>
-          <h2>Pond</h2>
+          <h2 className={'locTitle'}>Pond</h2>
           <div className={"locGroup"}>
             {sortedFish.pond.map(f => {
               return <FishPanel fish={f} />;
@@ -134,7 +139,7 @@ function App() {
       )}
       {sortedFish.clifftop.length > 0 && (
         <div>
-          <h2>Clifftop</h2>
+          <h2 className={'locTitle'}>Clifftop</h2>
           <div className={"locGroup"}>
             {sortedFish.clifftop.map(f => {
               return <FishPanel fish={f} />;
@@ -144,7 +149,7 @@ function App() {
       )}
       {sortedFish.pier.length > 0 && (
         <div>
-          <h2>Pier</h2>
+          <h2 className={'locTitle'}>Pier</h2>
           <div className={"locGroup"}>
             {sortedFish.pier.map(f => {
               return <FishPanel fish={f} />;
@@ -154,7 +159,7 @@ function App() {
       )}
       {sortedFish.rivermouth.length > 0 && (
         <div>
-          <h2>RiverMouth</h2>
+          <h2 className={'locTitle'}>River Mouth</h2>
           <div className={"locGroup"}>
             {sortedFish.rivermouth.map(f => {
               return <FishPanel fish={f} />;

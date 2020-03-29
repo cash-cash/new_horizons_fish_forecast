@@ -13,6 +13,13 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.pageTitle { 
+  color: #ff8a5c;
+}
+
+.locTitle {
+  color: #49beb7;
+}
 
 .App-header {
   background-color: #282c34;
@@ -55,10 +62,22 @@
 .timeSelect {
   display: flex;
   flex-wrap: wrap;
+  border: 3px solid #badfdb;
 
   /* border: 1px solid black; */
   justify-content: space-evenly;
   align-items: center;
+}
+
+.linksbar {
+  text-align: end;
+  margin-right: 20px;
+  margin-top: 8px;
+}
+
+.github {
+  width: 30px;
+  height: 30px;
 }
 
 @keyframes App-logo-spin {
